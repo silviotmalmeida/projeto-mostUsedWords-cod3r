@@ -33,6 +33,17 @@ async function createWindow() {
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
   }
+
+  // quando a janela terminar de carregar:
+  win.webContents.on('did-finish-load', () => {
+
+    // obtendo os valores de title e version a partir do package.json
+    const { title, version } = require('../package.json')
+
+    // aplicando os valores na janela
+    win.setTitle(`${title} :: ${version}`)
+  })
+
 }
 
 // Quit when all windows are closed.
