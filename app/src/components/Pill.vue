@@ -2,6 +2,7 @@
   <!-- trecho de código que representa o html do componente -->
   <!-- definindo o componente pill -->
   <div class="pill">
+    <!-- será renderizado uma pílula contendo a palavra e seu respectivo número de ocorrências -->
     <span class="name">{{ name }}</span>
     <span class="amount">{{ amount }}</span>
   </div>
