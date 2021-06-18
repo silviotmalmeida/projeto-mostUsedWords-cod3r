@@ -8,7 +8,7 @@ module.exports = (paths) => {
     try {
       // criando o array de saída a partir do array de paths
       const rows = paths
-        // criando um array com o conteudo dos arquivo e convertendo para utf8
+        // obtendo o conteudo dos arquivo e convertendo para utf8
         .map((path) => fs.readFileSync(path).toString("utf-8"))
         // concatenando todos os elementos do array em uma única string
         .reduce((fullText, fileText) => `${fullText}\n${fileText}`)
